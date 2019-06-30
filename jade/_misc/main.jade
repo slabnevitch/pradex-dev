@@ -1,0 +1,44 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='utf-8')
+		title
+			block title
+		meta(name='description', content='')
+		link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+		link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
+		link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+		link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='stylesheet', href='css/main.css')
+		//if lt IE 9
+			<script src="js/html5shiv.min.js"><script>
+			<script src="js/es5-shim.min.js"><script>
+			<script src="js/html5shiv-printshiv.min.js"><script>
+			<script src="js/1.4.2/respond.min.js"><script>
+		
+	body
+		// Здесь пишем код
+		include _mixins
+
+		include ../_includes/mob-menu
+
+		main.main-content
+			include ../_sections/_header
+			
+			block content
+				
+			include ../_sections/_footer
+			.body-cover
+
+		script(src='js/libs/jquery/jquery-1.11.2.min.js')
+		script(src='js/libs/jsscrollpane/js/jquery.mousewheel.js')
+		script(src='js/libs/jsscrollpane/js/jquery.jscrollpane.min.js')
+		script(src='js/libs/slick/slick.min.js')
+		script(src='js/libs/slideout/slideout.js')
+		script(src='js/libs/hammer/hammer.js')
+		script(src="js/pradex-map.js")
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_NAmCu9dm16a9i0oeX0T6rBQFgObeiZA&callback=initMap" async defer)
+
+		script(src='js/common.js')

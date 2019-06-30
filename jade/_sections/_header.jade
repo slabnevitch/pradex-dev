@@ -1,0 +1,185 @@
+header.header
+	.header-top
+		.header-top__wrapper.wrapper
+			.header-top__left-bar
+				- var langs = ['English', 'Русский'];
+				ul.header-langs
+					each lang in langs
+						li
+							a(href="#")= lang
+					li.active
+						a(href="#") Українська
+				
+				ul.header-icons
+					li
+						a(href="#")
+							i(class="fab fa-facebook-f")
+					li
+						a(href="#")
+							i(class="fab fa-instagram")
+			
+			.header-logo
+				a(href="#")
+					img(src="img/logo.jpg", alt="alt")
+				p Производитель 
+					br
+					| уличной мебели
+			
+			- var cats = ['Стулья', 'Столы', 'Кресла', 'Диваны', 'Лаунж Диваны', 'Шезлонги', 'Шкафы и тумбы', 'Светильники', 'Пуфы', 'Перегородки', 'Цветники', 'Акции'];
+			ul.header-menu
+				li.header-menu__item(data-menu="categories")
+					a(href="#").header-menu__link КАТЕГОРИИ
+
+					.header-cat-menu(data-menu="categories")
+						ul.wrapper.header-categories
+							each cat, index in cats
+								li
+									a(href="#")
+										span= cat
+										img(src="img/categories/" + (index +1) + ".jpg", alt="alt")
+				
+				li.header-menu__item(data-menu="collections")
+					a(href="#").header-menu__link КОЛЛЕКЦИИ
+					.header-cat-menu.header-collections-menu(data-menu="collections")
+						.wrapper
+							.collections-visual(style="background-image: url(img/collections/collections-img.jpg")
+
+
+							.collections-menu
+								- var colls = ['ВУД', 'ГАЛАНТ', 'ГЛОРИЯ', 'ГЛЕМ', 'ГОЛЬФ', 'ГРАНД', 'ГРЕЙС', 'ДЖАЗ', 'ДЖАЗ', 'ДЖАЗ', 'ИНЖИР', 'КАЛИФОРНИЯ', 'КАНОЭ', 'КАПРИ', 'КВАДРО', 'КИВИ', 'КЛЕВЕР', 'КОКОН', 'КАНОЭ', 'КАНОЭ', 'КОМФОРТ', 'КУПЕР', 'ЛЕГО', 'ЛИСТ', 'ЛЕЙЗИ', 'МАРОККО', 'МАРСЕЛЬ', 'МАРТИН', 'МАРТИН', 'КАНОЭ', 'МОНТАНА', 'НЕАПОЛЬ', 'НЕВАДА', 'ОАЗИС', 'ОЛЛИ', 'ОМЕГА', 'ОРБИТ', 'ОРИГАМИ', 'МАРТИН', 'КАНОЭ', 'ОРИГИНАЛ', 'ОСМО', 'ПАЛАНКИН', 'ПАЛЕРМО', 'ПАПАСАН', 'ПАРАДИЗ', 'ПАТИО', 'РЕЛАКС', 'МАРТИН', 'КАНОЭ', 'РИО', 'СИЕСТА', 'СЛИМ', 'СОЛЯРИС', 'ТАТАМИ', 'ТВИСТ', 'ТЕННЕССИ', 'ТЕТРИС', 'МАРТИН', 'ТИН', 'ТОСКАНА', 'ФИДЖИ', 'ФЛОРИДА', 'ФЛЕКС', 'ФЛЭШ', 'ШАТТЛ', 'ШЕНГЕН', 'ЭЙР', 'ЭЙФЕЛЬ', 'ЭЛЕОНОР'];
+								ul.header-collections-list
+									each col in colls
+										li
+											a(href="")= col
+				li.header-menu__item
+					a(href="#").header-menu__link ПРОЕКТЫ
+				li.header-menu__item
+					a(href="#").header-menu__link ТЕХНОЛОГИИ
+				li.header-menu__item
+					a(href="#").header-menu__link О КОМПАНИИ
+
+			a(href="tel:(097)0253030").header-tel (097) 025 30 30
+
+			a(href="#").toggle-mnu
+				span
+
+			.header-top__right-bar
+				ul.header-icons
+					li.to-click
+						i(class="fas fa-search")
+						.header-dropdown.header-search
+							input.header-search-inp(type="text", name="" placeholder="поиск")
+							i.fas.fa-times
+					
+					li.header-cart-sm.to-hover
+						div.header-cart-sm__rel
+							.ico-cart
+							.cart-conunter 1
+						.header-dropdown.cart-preview(data-slideout-ignore)
+							.cart-preview__header
+								.ico-cart
+								span Корзина
+							
+
+							.cart-preview__body.scroll-pane
+								- for (var i=0; i < 4; i++)
+									.cart-preview__item
+										.cart-preview__img
+											img(src="img/products/cart-img-1.jpg", alt="alt")
+										
+										.cart-preview__info
+											.cart-preview__handlers
+												.ico-plus.cart-preview__button--plus
+												.cart-preview__count 1
+												.ico-minus.cart-preview__button--minus
+
+											.cart-preview__product
+												.cart-preview__name СТУЛ БЛЮЗ
+												.cart-preview__price 1 836,00
+
+										i(class="fas fa-trash-alt")
+
+									.cart-preview__item
+										.cart-preview__img
+											img(src="img/products/cart-img-2.jpg", alt="alt")
+										
+										.cart-preview__info
+											.cart-preview__handlers
+												.ico-plus.cart-preview__button--plus
+												.cart-preview__count 1
+												.ico-minus.cart-preview__button--minus
+
+											.cart-preview__product
+												.cart-preview__name ДИВАН ГЛОРИЯ ТРЕХМЕСТНІЙ
+												.cart-preview__price 5 15 700,00
+
+										i(class="fas fa-trash-alt")
+								
+							.cart-preview-inner
+								.cart-preview__overal
+									span ИТОГО:
+									.cart-preview__overal-price 5 15 700,20
+
+								.cart-preview__recomendations
+									div С этим товаром рекомендуем:
+									
+									.cart-preview__item
+										.cart-preview__img
+											img(src="img/products/cart-img-1.jpg", alt="alt")
+										
+										.cart-preview__info
+											.cart-preview__handlers
+												.ico-plus.cart-preview__button--plus
+												.cart-preview__count 1
+												.ico-minus.cart-preview__button--minus
+
+											.cart-preview__product
+												.cart-preview__name СТУЛ БЛЮЗ
+												.cart-preview__price 1 836,00
+
+										i(class="fas fa-trash-alt")
+
+									a(href="#").button ПЕРЕЙТИ К ОПЛАТЕ
+
+							i.fas.fa-times
+					
+					li.to-hover.header-contacts-sm
+						i(class="fas fa-phone")
+						.header-dropdown.header-contacts(data-slideout-ignore)
+							form(action="#").header-contacts__form
+								.header-contacts__text
+									.header-contacts__item
+										.header-contacts__title ОТДЕЛ ПРОДАЖ
+										p
+											a(href="tel:0970253030") (097) 025 30 30
+										p
+											a(href="tel:0662573030") (066) 257 30 30
+
+										p Пн-Пт 9:00 — 20:00
+											br
+											| Сб-Вс — выходной
+
+									.header-contacts__item
+										.header-contacts__title САЛОН-МАГАЗИН
+										p
+											a(href="tel:0683184479") (068) 318 44 79
+
+										p с 10:00 до 20:00
+											br
+											| Без выходных
+
+									.header-contacts__item
+										.header-contacts__title ЕСТЬ ВОПРОСЫ?
+
+										p Введите Ваш номер телефона
+											br
+											| и мы перезвоним в течении пяти минут!
+
+									label
+										i(class="fas fa-phone")
+										input(type="text", name="" placeholder="+38 0ХХ ХХХ ХХ ХХ")
+								
+								button.button ПЕРЕЗВОНИТЕ МНЕ
+
+							i.fas.fa-times
+	

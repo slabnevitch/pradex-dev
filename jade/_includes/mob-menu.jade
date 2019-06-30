@@ -1,0 +1,27 @@
+- var cats = ['Стулья', 'Столы', 'Кресла', 'Диваны', 'Лаунж Диваны', 'Шезлонги', 'Шкафы и тумбы', 'Светильники', 'Пуфы', 'Перегородки', 'Цветники', 'Акции'];
+
+- var colls = ['ВУД', 'ГАЛАНТ', 'ГЛОРИЯ', 'ГЛЕМ', 'ГОЛЬФ', 'ГРАНД', 'ГРЕЙС', 'ДЖАЗ', 'ДЖАЗ', 'ДЖАЗ', 'ИНЖИР', 'КАЛИФОРНИЯ', 'КАНОЭ', 'КАПРИ', 'КВАДРО', 'КИВИ', 'КЛЕВЕР', 'КОКОН', 'КАНОЭ', 'КАНОЭ', 'КОМФОРТ', 'КУПЕР', 'ЛЕГО', 'ЛИСТ', 'ЛЕЙЗИ', 'МАРОККО', 'МАРСЕЛЬ', 'МАРТИН', 'МАРТИН', 'КАНОЭ', 'МОНТАНА', 'НЕАПОЛЬ', 'НЕВАДА', 'ОАЗИС', 'ОЛЛИ', 'ОМЕГА', 'ОРБИТ', 'ОРИГАМИ', 'МАРТИН', 'КАНОЭ', 'ОРИГИНАЛ', 'ОСМО', 'ПАЛАНКИН', 'ПАЛЕРМО', 'ПАПАСАН', 'ПАРАДИЗ', 'ПАТИО', 'РЕЛАКС', 'МАРТИН', 'КАНОЭ', 'РИО', 'СИЕСТА', 'СЛИМ', 'СОЛЯРИС', 'ТАТАМИ', 'ТВИСТ', 'ТЕННЕССИ', 'ТЕТРИС', 'МАРТИН', 'ТИН', 'ТОСКАНА', 'ФИДЖИ', 'ФЛОРИДА', 'ФЛЕКС', 'ФЛЭШ', 'ШАТТЛ', 'ШЕНГЕН', 'ЭЙР', 'ЭЙФЕЛЬ', 'ЭЛЕОНОР'];
+
+nav.mob-nav
+	ul.mob-menu.acordeon-list
+		li.mob-menu__item.acordeon-item.acordeon-item-with-sublist
+			a(href="#").mob-menu__link.acordeon-link КАТЕГОРИИ
+
+			ul.mob-submenu.acordeon-sublist
+				each cat, index in cats
+					li.mob-submenu__item
+						a(href="#").mob-submenu__link= cat
+		
+		li.mob-menu__item.acordeon-item.acordeon-item-with-sublist
+			a(href="#").mob-menu__link.acordeon-link КОЛЛЕКЦИИ
+				ul.mob-submenu.acordeon-sublist
+					each col in colls
+						li.mob-submenu__item
+							a(href="#").mob-submenu__link= col
+		
+		li.mob-menu__item.acordeon-item
+			a(href="#").mob-menu__link.acordeon-link ПРОЕКТЫ
+		li.mob-menu__item.acordeon-item
+			a(href="#").mob-menu__link.acordeon-link ТЕХНОЛОГИИ
+		li.mob-menu__item.acordeon-item
+			a(href="#").mob-menu__link.acordeon-link О КОМПАНИИ

@@ -1,0 +1,7 @@
+- var colls = ['МОНТАНА', 'НЕАПОЛЬ', 'БРИЗ', 'МОНТАНА', 'ФЛОРИДА' , 'СМОТРЕТЬ ВСЕ 60'];
+
+each coll, ind in colls
+	a(href="#").previews-item(style="background-image: url(img/collections/"+ (ind + 1) + ".jpg)")
+		.previews-item__cover
+		
+		.preview-name= coll

@@ -1,0 +1,26 @@
+.quality{
+	padding-top: rem(56);
+	h2{
+		text-transform: none;
+		font-size: 30px;
+		break-after: column;
+	}
+	.wrapper{
+		columns: 4;
+	 	column-gap: rem(135); 
+	 	padding-right: rem(135);
+	}
+	
+}
+.quality-block{
+	break-inside: avoid;
+	margin-bottom: rem(28);
+
+	p{
+		margin-bottom: 0;	
+		line-height: rem(22);
+	}
+}
+.quality-block__title{
+	text-transform: uppercase;
+}

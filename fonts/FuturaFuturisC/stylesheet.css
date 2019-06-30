@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'FuturaFuturisC';
+    src: url('FuturaFuturisC.eot');
+    src: url('FuturaFuturisC.eot?#iefix') format('embedded-opentype'),
+        url('FuturaFuturisC.woff') format('woff'),
+        url('FuturaFuturisC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
