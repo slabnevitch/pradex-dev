@@ -15,6 +15,10 @@
 		margin-bottom: rem(56);
 		text-transform: uppercase;
 	}
+
+	&-content{
+		justify-content: space-between;
+	}
 }
 .footer-left{
 	width: 40%;	
@@ -76,7 +80,7 @@
 	margin-right: -15px;
 }
 .footer-column{
-	flex: 1 1 33.33333%;
+	width: 33.33333%;
 	padding: 0 15px;
 	font-size: 14px;
 

@@ -88,6 +88,7 @@
 	.footer-left{
 		padding-right: 30px;
 	}
+
 }
 
 @media only screen and (max-width : 1300px){
@@ -194,7 +195,9 @@
 	.rotang{
 		padding-top: rem(55);
 	}
-
+	.footer-column{
+		width: 50%;
+	}
 
 }
 
@@ -246,9 +249,10 @@
 	.footer-left,
 	.footer-right{
 		width: 100%;
+		padding-right: 0;	
 	}
 	.footer-column{
-		flex: 1 1 50%;
+		width: 33.33333%;
 	}
 }
 	
@@ -307,28 +311,32 @@
 			display: block;
 		}
 	}
-	/*Disable Animation on Mobile Devices*/
-	.animated{
-		
-		/*CSS transitions*/
-		-o-transition-property: none !important;
-		-moz-transition-property: none !important;
-		-ms-transition-property: none !important;
-		-webkit-transition-property: none !important;
-		transition-property: none !important;
-		/*CSS transforms*/
-		-o-transform: none !important;
-		-moz-transform: none !important;
-		-ms-transform: none !important;
-		-webkit-transform: none !important;
-		transform: none !important;
-		/*CSS animations*/
-		-webkit-animation: none !important;
-		-moz-animation: none !important;
-		-o-animation: none !important;
-		-ms-animation: none !important;
-		animation: none !important;
+	.header-dropdown{
+		max-height: 100vh;
+		overflow: auto;
 	}
+	/*Disable Animation on Mobile Devices*/
+	// .animated{
+		
+	// 	/*CSS transitions*/
+	// 	-o-transition-property: none !important;
+	// 	-moz-transition-property: none !important;
+	// 	-ms-transition-property: none !important;
+	// 	-webkit-transition-property: none !important;
+	// 	transition-property: none !important;
+	// 	/*CSS transforms*/
+	// 	-o-transform: none !important;
+	// 	-moz-transform: none !important;
+	// 	-ms-transform: none !important;
+	// 	-webkit-transform: none !important;
+	// 	transform: none !important;
+	// 	/*CSS animations*/
+	// 	-webkit-animation: none !important;
+	// 	-moz-animation: none !important;
+	// 	-o-animation: none !important;
+	// 	-ms-animation: none !important;
+	// 	animation: none !important;
+	// }
 }
 
 
@@ -352,8 +360,6 @@
 	.cart-preview__img{
 		width: 70px;
 		height: 70px;
-
-
 	}
 	.cart-preview__price{
 		font-size: 20px;
@@ -372,9 +378,8 @@
 	.cart-preview__overal-price{
 		font-size: 24px;
 	}
-	.header-dropdown{
-		max-height: 100vh;
-		overflow: auto;
+	.footer-column{
+		width: 50%;
 	}
 
 }
@@ -469,8 +474,9 @@
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px){
-
-	
+		.footer-column{
+			width: 100%;	
+		}	
 }
 
 
@@ -519,6 +525,7 @@
 @media only screen and (min-width : 1200px){
 	
 }
+
 
 
 
