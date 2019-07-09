@@ -25,3 +25,19 @@ nav.mob-nav
 			a(href="#").mob-menu__link.acordeon-link ТЕХНОЛОГИИ
 		li.mob-menu__item.acordeon-item
 			a(href="#").mob-menu__link.acordeon-link О КОМПАНИИ
+
+	- var langs = ['English', 'Русский'];
+	ul.header-langs
+		each lang in langs
+			li
+				a(href="#")= lang
+		li.active
+			a(href="#") Українська
+	
+	ul.header-icons
+		li
+			a(href="#")
+				i(class="fab fa-facebook-f")
+		li
+			a(href="#")
+				i(class="fab fa-instagram")

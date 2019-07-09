@@ -1,7 +1,7 @@
 header.header
 	.header-top
 		.header-top__wrapper.wrapper
-			.header-top__left-bar
+			.header-top__left-bar.animated.fadeOutLeft
 				- var langs = ['English', 'Русский'];
 				ul.header-langs
 					each lang in langs
@@ -63,7 +63,7 @@ header.header
 			a(href="#").toggle-mnu
 				span
 
-			.header-top__right-bar
+			.header-top__right-bar.animated.fadeOutRight
 				ul.header-icons
 					li.to-click
 						i(class="fas fa-search")
@@ -143,7 +143,7 @@ header.header
 
 							i.fas.fa-times
 					
-					li.to-hover.header-contacts-sm
+					li.to-click.header-contacts-sm
 						i(class="fas fa-phone")
 						.header-dropdown.header-contacts(data-slideout-ignore)
 							form(action="#").header-contacts__form

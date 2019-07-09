@@ -11,15 +11,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/main.css">
-    <!--if lt IE 9
-    <script src="js/html5shiv.min.js"><script>
-    <script src="js/es5-shim.min.js"><script>
-    <script src="js/html5shiv-printshiv.min.js"><script>
-    <script src="js/1.4.2/respond.min.js"><script>
-    
-    -->
   </head>
   <body>
+    <div class="preloader"></div>
     <!-- Здесь пишем код-->
     <nav class="mob-nav">
       <ul class="mob-menu acordeon-list">
@@ -116,12 +110,21 @@
         <li class="mob-menu__item acordeon-item"><a href="#" class="mob-menu__link acordeon-link">ТЕХНОЛОГИИ</a></li>
         <li class="mob-menu__item acordeon-item"><a href="#" class="mob-menu__link acordeon-link">О КОМПАНИИ</a></li>
       </ul>
+      <ul class="header-langs">
+        <li><a href="#">English</a></li>
+        <li><a href="#">Русский</a></li>
+        <li class="active"><a href="#">Українська</a></li>
+      </ul>
+      <ul class="header-icons">
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
     </nav>
     <main class="main-content">
       <header class="header">
         <div class="header-top">
           <div class="header-top__wrapper wrapper">
-            <div class="header-top__left-bar">
+            <div class="header-top__left-bar animated fadeOutLeft">
               <ul class="header-langs">
                 <li><a href="#">English</a></li>
                 <li><a href="#">Русский</a></li>
@@ -239,7 +242,7 @@
               <li class="header-menu__item"><a href="#" class="header-menu__link">ТЕХНОЛОГИИ</a></li>
               <li class="header-menu__item"><a href="#" class="header-menu__link">О КОМПАНИИ</a></li>
             </ul><a href="tel:(097)0253030" class="header-tel">(097) 025 30 30</a><a href="#" class="toggle-mnu"><span></span></a>
-            <div class="header-top__right-bar">
+            <div class="header-top__right-bar animated fadeOutRight">
               <ul class="header-icons">
                 <li class="to-click"><i class="fas fa-search"></i>
                   <div class="header-dropdown header-search">
@@ -393,7 +396,7 @@
                     </div><i class="fas fa-times"></i>
                   </div>
                 </li>
-                <li class="to-hover header-contacts-sm"><i class="fas fa-phone"></i>
+                <li class="to-click header-contacts-sm"><i class="fas fa-phone"></i>
                   <div data-slideout-ignore class="header-dropdown header-contacts">
                     <form action="#" class="header-contacts__form">
                       <div class="header-contacts__text">
@@ -429,47 +432,47 @@
         <div class="wrapper">
           <div class="banner-slider">
             <div class="banner-slide">
-              <div class="banner-slide__left">
+              <div class="banner-slide__left animated fadeOutLeft">
                 <div class="banner-slide__title">Новая коллекция светильников <br>из ротанга</div>
                 <p>5 лет гарантии</p>
               </div>
-              <div class="banner-slide__right">
+              <div class="banner-slide__right animated fadeOutRight">
                 <div class="banner-slide__img"><img src="img/main-visual.jpg" alt="alt"></div>
               </div>
             </div>
             <div class="banner-slide">
-              <div class="banner-slide__left">
+              <div class="banner-slide__left animated fadeOutLeft">
                 <div class="banner-slide__title">Новая коллекция светильников <br>из ротанга</div>
                 <p>5 лет гарантии</p>
               </div>
-              <div class="banner-slide__right">
+              <div class="banner-slide__right animated fadeOutRight">
                 <div class="banner-slide__img"><img src="img/main-visual.jpg" alt="alt"></div>
               </div>
             </div>
             <div class="banner-slide">
-              <div class="banner-slide__left">
+              <div class="banner-slide__left animated fadeOutLeft">
                 <div class="banner-slide__title">Новая коллекция светильников <br>из ротанга</div>
                 <p>5 лет гарантии</p>
               </div>
-              <div class="banner-slide__right">
+              <div class="banner-slide__right animated fadeOutRight">
                 <div class="banner-slide__img"><img src="img/main-visual.jpg" alt="alt"></div>
               </div>
             </div>
             <div class="banner-slide">
-              <div class="banner-slide__left">
+              <div class="banner-slide__left animated fadeOutLeft">
                 <div class="banner-slide__title">Новая коллекция светильников <br>из ротанга</div>
                 <p>5 лет гарантии</p>
               </div>
-              <div class="banner-slide__right">
+              <div class="banner-slide__right animated fadeOutRight">
                 <div class="banner-slide__img"><img src="img/main-visual.jpg" alt="alt"></div>
               </div>
             </div>
             <div class="banner-slide">
-              <div class="banner-slide__left">
+              <div class="banner-slide__left animated fadeOutLeft">
                 <div class="banner-slide__title">Новая коллекция светильников <br>из ротанга</div>
                 <p>5 лет гарантии</p>
               </div>
-              <div class="banner-slide__right">
+              <div class="banner-slide__right animated fadeOutRight">
                 <div class="banner-slide__img"><img src="img/main-visual.jpg" alt="alt"></div>
               </div>
             </div>
@@ -484,8 +487,10 @@
               <div class="product-card__img"><img src="img/products/1.jpg" alt="alt"></div>
             </div>
             <div class="product-card__name">СТУЛ БЛЮЗ</div>
-            <div class="product-card__price">1 836,00</div>
-            <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            <div class="product-card__bottom">
+              <div class="product-card__price">1 836,00</div>
+              <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            </div>
           </div>
           <div class="product-card">
             <div class="product-card__top">
@@ -493,8 +498,10 @@
               <div class="product-card__img"><img src="img/products/2.jpg" alt="alt"></div>
             </div>
             <div class="product-card__name">ДИВАН ГЛОРИЯ ТРЕХМЕСТНІЙ</div>
-            <div class="product-card__price">1 836,00</div>
-            <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            <div class="product-card__bottom">
+              <div class="product-card__price">1 836,00</div>
+              <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            </div>
           </div>
           <div class="product-card">
             <div class="product-card__top">
@@ -502,8 +509,10 @@
               <div class="product-card__img"><img src="img/products/3.jpg" alt="alt"></div>
             </div>
             <div class="product-card__name">СТУЛ ВУД-2</div>
-            <div class="product-card__price">1 836,00</div>
-            <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            <div class="product-card__bottom">
+              <div class="product-card__price">1 836,00</div>
+              <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            </div>
           </div>
           <div class="product-card">
             <div class="product-card__top">
@@ -511,8 +520,10 @@
               <div class="product-card__img"><img src="img/products/4.jpg" alt="alt"></div>
             </div>
             <div class="product-card__name">СТУЛ ВУД-3</div>
-            <div class="product-card__price">1 836,00</div>
-            <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            <div class="product-card__bottom">
+              <div class="product-card__price">1 836,00</div>
+              <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            </div>
           </div>
           <div class="product-card product-card--new">
             <div class="product-card__top">
@@ -520,8 +531,10 @@
               <div class="product-card__img"><img src="img/products/1.jpg" alt="alt"></div>
             </div>
             <div class="product-card__name">СТУЛ БЛЮЗ</div>
-            <div class="product-card__price">1 836,00</div>
-            <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            <div class="product-card__bottom">
+              <div class="product-card__price">1 836,00</div>
+              <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            </div>
           </div>
           <div class="product-card">
             <div class="product-card__top">
@@ -529,8 +542,10 @@
               <div class="product-card__img"><img src="img/products/2.jpg" alt="alt"></div>
             </div>
             <div class="product-card__name">ДИВАН ГЛОРИЯ ТРЕХМЕСТНІЙ</div>
-            <div class="product-card__price">1 836,00</div>
-            <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            <div class="product-card__bottom">
+              <div class="product-card__price">1 836,00</div>
+              <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            </div>
           </div>
           <div class="product-card">
             <div class="product-card__top">
@@ -538,8 +553,10 @@
               <div class="product-card__img"><img src="img/products/3.jpg" alt="alt"></div>
             </div>
             <div class="product-card__name">СТУЛ ВУД-2</div>
-            <div class="product-card__price">1 836,00</div>
-            <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            <div class="product-card__bottom">
+              <div class="product-card__price">1 836,00</div>
+              <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            </div>
           </div>
           <div class="product-card">
             <div class="product-card__top">
@@ -547,8 +564,10 @@
               <div class="product-card__img"><img src="img/products/4.jpg" alt="alt"></div>
             </div>
             <div class="product-card__name">СТУЛ ВУД-3</div>
-            <div class="product-card__price">1 836,00</div>
-            <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            <div class="product-card__bottom">
+              <div class="product-card__price">1 836,00</div>
+              <div class="product-card__button"><a href="#" class="button button-mini">У КОШИК</a></div>
+            </div>
           </div>
         </div>
       </section>
@@ -556,17 +575,17 @@
         <div class="wrapper previews-top">
           <h2>КОЛЛЕКЦИИ</h2>
         </div>
-        <div class="wrapper wrapper--padded-left previews-items"><a href="#" style="background-image: url(img/collections/1.jpg)" class="previews-item">
+        <div class="wrapper wrapper--padded-left previews-items"><a href="#" style="background-image: url(img/collections/1.jpg)" class="previews-item fadeOutDown animated">
             <div class="previews-item__cover"></div>
-            <div class="preview-name">МОНТАНА</div></a><a href="#" style="background-image: url(img/collections/2.jpg)" class="previews-item">
+            <div class="preview-name">МОНТАНА</div></a><a href="#" style="background-image: url(img/collections/2.jpg)" class="previews-item fadeOutDown animated">
             <div class="previews-item__cover"></div>
-            <div class="preview-name">НЕАПОЛЬ</div></a><a href="#" style="background-image: url(img/collections/3.jpg)" class="previews-item">
+            <div class="preview-name">НЕАПОЛЬ</div></a><a href="#" style="background-image: url(img/collections/3.jpg)" class="previews-item fadeOutDown animated">
             <div class="previews-item__cover"></div>
-            <div class="preview-name">БРИЗ</div></a><a href="#" style="background-image: url(img/collections/4.jpg)" class="previews-item">
+            <div class="preview-name">БРИЗ</div></a><a href="#" style="background-image: url(img/collections/4.jpg)" class="previews-item fadeOutDown animated">
             <div class="previews-item__cover"></div>
-            <div class="preview-name">МОНТАНА</div></a><a href="#" style="background-image: url(img/collections/5.jpg)" class="previews-item">
+            <div class="preview-name">МОНТАНА</div></a><a href="#" style="background-image: url(img/collections/5.jpg)" class="previews-item fadeOutDown animated">
             <div class="previews-item__cover"></div>
-            <div class="preview-name">ФЛОРИДА</div></a><a href="#" style="background-image: url(img/collections/6.jpg)" class="previews-item">
+            <div class="preview-name">ФЛОРИДА</div></a><a href="#" style="background-image: url(img/collections/6.jpg)" class="previews-item fadeOutDown animated">
             <div class="previews-item__cover"></div>
             <div class="preview-name">СМОТРЕТЬ ВСЕ 60</div></a>
         </div>
@@ -624,17 +643,17 @@
         <div class="wrapper previews-top">
           <h2>ПРОЕКТЫ</h2>
         </div>
-        <div class="wrapper wrapper--padded-left previews-items"><a href="#" style="background-image: url(img/collections/1.jpg)" class="previews-item">
+        <div class="wrapper wrapper--padded-left previews-items"><a href="#" style="background-image: url(img/collections/1.jpg)" class="previews-item fadeOutDown animated">
             <div class="previews-item__cover"></div>
-            <div class="preview-name">МОНТАНА</div></a><a href="#" style="background-image: url(img/collections/2.jpg)" class="previews-item">
+            <div class="preview-name">МОНТАНА</div></a><a href="#" style="background-image: url(img/collections/2.jpg)" class="previews-item fadeOutDown animated">
             <div class="previews-item__cover"></div>
-            <div class="preview-name">НЕАПОЛЬ</div></a><a href="#" style="background-image: url(img/collections/3.jpg)" class="previews-item">
+            <div class="preview-name">НЕАПОЛЬ</div></a><a href="#" style="background-image: url(img/collections/3.jpg)" class="previews-item fadeOutDown animated">
             <div class="previews-item__cover"></div>
-            <div class="preview-name">БРИЗ</div></a><a href="#" style="background-image: url(img/collections/4.jpg)" class="previews-item">
+            <div class="preview-name">БРИЗ</div></a><a href="#" style="background-image: url(img/collections/4.jpg)" class="previews-item fadeOutDown animated">
             <div class="previews-item__cover"></div>
-            <div class="preview-name">МОНТАНА</div></a><a href="#" style="background-image: url(img/collections/5.jpg)" class="previews-item">
+            <div class="preview-name">МОНТАНА</div></a><a href="#" style="background-image: url(img/collections/5.jpg)" class="previews-item fadeOutDown animated">
             <div class="previews-item__cover"></div>
-            <div class="preview-name">ФЛОРИДА</div></a><a href="#" style="background-image: url(img/collections/6.jpg)" class="previews-item">
+            <div class="preview-name">ФЛОРИДА</div></a><a href="#" style="background-image: url(img/collections/6.jpg)" class="previews-item fadeOutDown animated">
             <div class="previews-item__cover"></div>
             <div class="preview-name">СМОТРЕТЬ ВСЕ 60</div></a>
         </div>
@@ -700,6 +719,8 @@
     <script src="js/libs/jsscrollpane/js/jquery.jscrollpane.min.js"></script>
     <script src="js/libs/slick/slick.min.js"></script>
     <script src="js/libs/slideout/slideout.js"></script>
+    <script src="js/libs/waypoints/waypoints.min.js"></script>
+    <script src="js/libs/animate/animate-css.js"></script>
     <script src="js/pradex-map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_NAmCu9dm16a9i0oeX0T6rBQFgObeiZA&amp;callback=initMap" async defer></script>
     <script src="js/common.js"></script>

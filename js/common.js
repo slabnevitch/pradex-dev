@@ -1,20 +1,38 @@
 $(function() {
 
-	// jsscrollpane
-		// if(document.querySelector('.scroll-pane')){
-		// 	var scrollPane = $('.scroll-pane').jScrollPane({
-		// 		verticalDragMaxHeight : 100,
-		// 		animateScroll : true
-		// 	});
+	// blocks animation
+	
 
-		// 	var scrollPaneApi = scrollPane.data('jsp');
+	$('.projects .previews-item').waypoint(function() {
 
-		// 	$(window).resize(function() {
-		// 		scrollPaneApi.reinitialise();
-		// 	});
-			
-		// }
-	// end jsscrollpane
+		$('.projects .previews-item').each(function(index) {
+			var $this = $(this);
+
+			setTimeout(function() {
+				$this.removeClass('fadeOutDown');
+				$this.animated('fadeInUp');
+
+			}, index*300);
+
+		});
+	
+	}, {offset: '100%'});
+
+	$('.collections .previews-item').waypoint(function() {
+
+		$('.collections .previews-item').each(function(index) {
+			var $this = $(this);
+
+			setTimeout(function() {
+				$this.removeClass('fadeOutDown');
+				$this.animated('fadeInUp');
+
+			}, index*300);
+
+		});
+	
+	}, {offset: '100%'});
+	// end blocks animation
 
 
 	// slideout
@@ -122,6 +140,11 @@ $(function() {
 					this.mainMenuHover = function(e) {
 						var $th = $(this);
 
+						$th.closest('.header-menu__item')
+							.addClass('active')
+							.siblings()
+							.removeClass('active');
+
 						if($th.attr('data-menu') !== undefined){
 							_self.coverShow(true);
 							$th.find('.header-cat-menu').fadeIn();
@@ -133,6 +156,10 @@ $(function() {
 
 					this.mainMenuOut = function(e) {
 						var $th = $(this);
+
+						$th.closest('.header-menu__item')
+							.removeClass('active');
+
 						if($th.attr('data-menu') !== undefined){
 							_self.coverHide();
 
@@ -262,8 +289,16 @@ $(function() {
 });
 
 $(window).load(function() {
+	$('.preloader').hide();
+	$('.header-top__left-bar').removeClass('fadeOutLeft');
+	$('.header-top__left-bar').addClass('fadeInLeft');
+	// $('.header-top__left-bar').animated('fadeInLeft');
+	$('.header-top__right-bar').removeClass('fadeOutRight');
+	$('.header-top__right-bar').addClass('fadeInRight');
 
-	$(".loader_inner").fadeOut();
-	$(".loader").delay(400).fadeOut("slow");
+	$('.banner-slide__left').removeClass('fadeOutLeft');
+	$('.banner-slide__left').addClass('fadeInLeft');
+	$('.banner-slide__right').removeClass('fadeOutRight');
+	$('.banner-slide__right').addClass('fadeInRight');
 
 });

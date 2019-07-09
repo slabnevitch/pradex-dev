@@ -17,6 +17,7 @@
 .banner-slide__left{
 	padding-top: rem(183);
 	padding-left: rem(180);
+	animation-delay: 1s;
 	p{
 		font-size: 20px;
 	}
@@ -24,6 +25,7 @@
 .banner-slide__right{
 	padding-top: rem(115);
 	// padding-left: rem(60);
+	animation-delay: 2s;
 
 }
 .banner-slide__title{
