@@ -34,6 +34,19 @@ $(function() {
 	}, {offset: '100%'});
 	// end blocks animation
 
+	// quality-toggle
+		$('.quality-inner__more').click(function() {
+			var $th = $(this);
+
+			$('.quality-inner')
+				.toggleClass('opened');
+		
+
+			$th.text() == 'Читать далее' ? $th.text("Свенуть") : $th.text('Читать далее');
+			
+			return false;
+		});
+	// end quality-toggle
 
 	// slideout
 		var slideout = new Slideout({
@@ -290,11 +303,8 @@ $(function() {
 
 $(window).load(function() {
 	$('.preloader').hide();
-	$('.header-top__left-bar').removeClass('fadeOutLeft');
-	$('.header-top__left-bar').addClass('fadeInLeft');
-	// $('.header-top__left-bar').animated('fadeInLeft');
-	$('.header-top__right-bar').removeClass('fadeOutRight');
-	$('.header-top__right-bar').addClass('fadeInRight');
+	$('.header-top__left-bar').removeClass('hidden-left');
+	$('.header-top__right-bar').removeClass('hidden-right');
 
 	$('.banner-slide__left').removeClass('fadeOutLeft');
 	$('.banner-slide__left').addClass('fadeInLeft');

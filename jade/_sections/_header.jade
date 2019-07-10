@@ -1,7 +1,7 @@
 header.header
 	.header-top
 		.header-top__wrapper.wrapper
-			.header-top__left-bar.animated.fadeOutLeft
+			.header-top__left-bar.hidden-left
 				- var langs = ['English', 'Русский'];
 				ul.header-langs
 					each lang in langs
@@ -63,7 +63,7 @@ header.header
 			a(href="#").toggle-mnu
 				span
 
-			.header-top__right-bar.animated.fadeOutRight
+			.header-top__right-bar.hidden-right
 				ul.header-icons
 					li.to-click
 						i(class="fas fa-search")

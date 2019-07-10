@@ -341,6 +341,27 @@
 	.header-dropdown .ico-cart{
 		position: static;
 	}
+	.quality-inner__cover{
+		display: block;
+	}
+	.quality-inner__more{
+		display: inline-block;
+	}
+	.quality-inner{
+		max-height: 160px;
+		overflow: hidden;
+
+		&.opened{
+			max-height: none;
+			overflow: visible;
+
+			.quality-inner__cover{
+				display: none;
+			}
+		}
+
+	}
+	
 	/*Disable Animation on Mobile Devices*/
 	.animated{
 		
@@ -413,6 +434,7 @@
 	.banner-slide__right{
 		padding-bottom: 30px;
 	}
+
 }
 	
 	
@@ -526,22 +548,7 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px){
-	/**/
-	// .header-top__right-bar{
-	// 	.header-icons{
-	// 		li{
-	// 			&.to-hover{
-	// 				&:hover, &:active{
-	// 					.header-dropdown{
-	// 						display: block;
-	// 					}
-	// 				}
 
-
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 
 

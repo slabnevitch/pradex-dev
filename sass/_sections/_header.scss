@@ -46,7 +46,8 @@
 	position: absolute;
 	top: 100%;
 	left: calc((100% - 1668px) - (100% - 1668px)/2 - 75px;
-	animation-delay: 2s;
+	transition: all 2s ease-out;
+	transition-delay: 1s;
 
 	.header-icons{
 		li{
@@ -117,7 +118,8 @@
 	position: absolute;
 	top: 60px;
 	right: calc((100% - 1668px) - (100% - 1668px)/2 - 34px;
-	animation-delay: 3s;
+	transition: all 1s ease-out;
+	transition-delay: 3s;
 
 	.header-icons{
 		li{

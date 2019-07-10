@@ -81,6 +81,14 @@ h2{
 input{
 	outline: none;
 }
+.hidden-left{
+
+	transform: translateX(-200px);
+}
+.hidden-right{
+	
+	transform: translateX(200px);
+}
 .button{
   display: inline-block;
   width: 100%;
