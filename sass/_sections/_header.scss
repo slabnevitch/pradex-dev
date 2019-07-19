@@ -116,7 +116,7 @@
 
 .header-top__right-bar{
 	position: absolute;
-	top: 60px;
+	top: 56px;
 	right: calc((100% - 1668px) - (100% - 1668px)/2 - 34px;
 	transition: all 1s ease-out;
 	transition-delay: 3s;
@@ -166,9 +166,9 @@
 		cursor: pointer;
 	}
 	.ico-cart{
-		position: absolute;
-		top: 30px;
-		right: 60px;
+		// position: absolute;
+		// top: 30px;
+		// right: 60px;
 		cursor: pointer;
 
 	}
@@ -178,12 +178,18 @@
 	&.header-contacts{
 		padding-top: 60px;
 	}
-}
-.header-cart-sm{
-	.fa-times{
-		display: none;
+	&.header-search{
+		top: -40px;
+		.fa-times{
+			top: 37px;
+		}
 	}
 }
+// .header-cart-sm{
+// 	.fa-times{
+// 		display: none;
+// 	}
+// }
 .header-search{
 	padding-top: 34px;
 	padding-bottom: 36px;
@@ -407,7 +413,7 @@
 .header-collections-list{
 	column-count: 8;
 	 column-gap: 40px;
-	 column-fill: auto;
+	 // column-fill: auto;
 
 	li{
 		margin-bottom: 11px;
@@ -506,6 +512,7 @@
 	width: 99px;
 	height: 99px;
 	margin-right: 10px;
+	flex-shrink: 0;
 
 	img{
 		@include absolute-center;

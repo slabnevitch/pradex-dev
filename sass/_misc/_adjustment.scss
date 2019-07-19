@@ -82,11 +82,11 @@ input{
 	outline: none;
 }
 .hidden-left{
-
+	opacity: 0;
 	transform: translateX(-200px);
 }
 .hidden-right{
-	
+	opacity: 0;
 	transform: translateX(200px);
 }
 .button{

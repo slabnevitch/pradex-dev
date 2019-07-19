@@ -19,8 +19,8 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 300px;
-	@include vertical-grad(transparent, #fff);
+	height: 200px;
+	background: linear-gradient(to bottom, rgba(white, .0001), #fff);
 }
 .quality-inner__more{
 	display: none;
