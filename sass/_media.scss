@@ -22,6 +22,9 @@
 	.header-top__right-bar{
 		right: calc((100% - 1200px) - (100% - 1200px)/2 - 30px);
 	}
+	.header.banner--stick .toggle-mnu--for-fixed{
+		left: calc((100% - 1200px) - (100% - 1200px)/2 - 35px);
+	}
 	.header-menu{
 		margin-right: 30px;
 	}

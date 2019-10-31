@@ -5751,8 +5751,8 @@ li {
   margin-top: 0;
   position: fixed;
   top: 25px;
-  left: -webkit-calc((100% - 1200px) - (100% - 1200px)/2 - 30px);
-  left: calc((100% - 1200px) - (100% - 1200px)/2 - 30px);
+  left: -webkit-calc((100% - 1668px) - (100% - 1668px)/2 - 75px);
+  left: calc((100% - 1668px) - (100% - 1668px)/2 - 75px);
 }
 
 .header.banner--stick .header-logo,
@@ -5798,7 +5798,7 @@ li {
 }
 
 .header-top__left-bar .header-icons li {
-  margin-bottom: 48px;
+  margin-bottom: 28px;
 }
 
 .header-top__left-bar .header-icons li:last-child {
@@ -7862,6 +7862,11 @@ li {
   .header-top__right-bar {
     right: -webkit-calc((100% - 1200px) - (100% - 1200px)/2 - 30px);
     right: calc((100% - 1200px) - (100% - 1200px)/2 - 30px);
+  }
+
+  .header.banner--stick .toggle-mnu--for-fixed {
+    left: -webkit-calc((100% - 1200px) - (100% - 1200px)/2 - 35px);
+    left: calc((100% - 1200px) - (100% - 1200px)/2 - 35px);
   }
 
   .header-menu {
