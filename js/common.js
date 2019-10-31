@@ -37,7 +37,6 @@ $(function() {
 					
 
 					this.init = function() {
-						console.log('init!');
 						this.events();
 						this.customScrollInit();
 					},
@@ -56,7 +55,6 @@ $(function() {
 					},
 
 					this.customScrollInit = function() {
-						console.log('customScrollLength=  ' + $('.scroll-pane').length);
 
 						if($('.scroll-pane').length > 0){
 							$('.scroll-pane').each(function(ind, elem) {
@@ -129,22 +127,19 @@ $(function() {
 					},
 
 					this.searchIconClick = function(e) {
-						console.log('click!!');
 						$(this).find('.header-dropdown').show();
 						_self.coverShow(false);
 						_self.customScrollReInit();
-						if(screen.width < 768){
-							$('html').addClass('freez');
-						}
+						// if(screen.width < 768){
+						// 	$('html').addClass('freez');
+						// }
 						e.stopPropagation();
 					},
 
 					this.iconsHover = function() {
 						if(screen.width > 768){
-							console.log('in');
 							$(this).find('.header-dropdown').show();
 							if($(this).children('.cart-preview').length > 0){
-								console.log('scroll pane is real!');
 								scrollPaneApi.reinitialise();
 							}
 							$('.body-cover').css('display', 'block');
@@ -157,7 +152,6 @@ $(function() {
 					},
 
 					this.iconsOut = function() {
-						console.log('out');
 						$(this).find('.header-dropdown').hide();
 						_self.coverHide();
 					},
@@ -175,7 +169,6 @@ $(function() {
 					},
 
 					this.hideAllDropdowns = function() {
-						console.log('hide all!');
 							$('.header-dropdown').hide();
 							this.coverHide();
 							$header.removeClass('submenu-opened');
@@ -253,7 +246,6 @@ $(function() {
 			elem.addEventListener('click', function(e) {
 				e.preventDefault();
 				// this.classList.toggle('on');
-				console.log('click to burger');
 				slideout.toggle();
 			});
 		});
@@ -266,6 +258,7 @@ $(function() {
 		slideout
 		.on('beforeopen', function() {
 			this.panel.classList.add('panel-open');
+			$('html').addClass('fixed-header-to-backward');
 		})
 		.on('open', function() {
 			this.panel.addEventListener('click', close);
@@ -273,6 +266,7 @@ $(function() {
 		.on('beforeclose', function() {
 			this.panel.classList.remove('panel-open');
 			this.panel.removeEventListener('click', close);
+			$('html').removeClass('fixed-header-to-backward');
 		});
 	// end slideout
 
@@ -401,12 +395,8 @@ $(function() {
 
 				 });
 
-				cardViewNavSwiper.on('slideChange', function () {
-					console.log('slide changed');
-				});
 				cardViewNavSwiper.on('click', function () {
-					console.log('slide clicked');
-					console.log(cardViewNavSwiper.clickedIndex);
+
 					cardViewDisplaySwiper.slideTo(cardViewNavSwiper.clickedIndex);
 				});
 
@@ -516,9 +506,6 @@ $(function() {
 				if(thCounterVal < 0){
 					thCounterVal = 0;
 				} 
-			console.log(thCounterVal);
-
-
 			$thCounter.text(thCounterVal);
 
 		});
@@ -591,8 +578,6 @@ $(function() {
 				$main = $('.main-content ');
 
 			this.init = function() {
-				console.log('$popupParent height in init ' + $popupParent.height());
-
 				this.bindEvents();
 			}
 			this.bindEvents = function() {
@@ -624,12 +609,8 @@ $(function() {
 					luft = this.offsetTop + headerHeight + 20;
 
 				if(screen.width <=576) luft = luft - 10;
-				console.log('header height ' + $('.header').height());
-
-				// console.log('boundtop= ' + top);
 				
 				$currentPopup.css('top', luft);
-				// console.log($("[data-option="+id+"]"));
 				$cover.fadeIn();
 				$currentPopup.fadeIn();
 				$main.addClass('popup-visible');
