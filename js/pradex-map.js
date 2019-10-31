@@ -24,19 +24,4 @@ function initMap() {
      // styles: gmapStyles
       // gestureHandling: 'none' //запрет на прокручивание карты
     });
-
-  var image = {
-    url: '../img/icons/map-marker.png'
-          // size: new google.maps.Size(50, 50),
-          // origin: new google.maps.Point(0, 0),
-          // anchor: new google.maps.Point(0, 32)
-
-        };
-
-    var marker = new google.maps.Marker({
-          position: {lat: 55.746512, lng: 37.392270},
-          icon: image 
-        });
-
-    marker.setMap(mapShop);
 }

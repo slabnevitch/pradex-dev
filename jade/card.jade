@@ -1,0 +1,39 @@
+extends _misc/main
+
+block title
+	| Карточка товара
+
+block content
+	include _sections/card-top
+	//- include _sections/products
+	//- include _sections/collections
+	//- include _sections/quality
+	//- include _misc/mat-selection
+	
+	section.card-slider(data-slideout-ignore)
+		.wrapper
+			.prod-card-sm-title КОЛЛЕКЦИЯ ПАПАСАН:
+
+			.swiper-container.prod-coll-slider
+				.swiper-wrapper
+					- for (var i=0; i < 2; i++)
+						each prod, index in prods
+							.swiper-slide
+								a(href="#").product-card
+									.product-card__top
+										.product-card__label новинка
+										.product-card__img
+												img(src="img/product-card/slider/"+ (index + 1) + ".jpg", alt="alt")
+									.product-card__name= prod
+									.product-card__bottom
+									
+										.product-card__price 1 836,00
+
+										//- .product-card__button
+										//- 	a(href="#").button.button-mini У КОШИК
+				.swiper-scrollbar
+	
+	include _sections/rotang
+
+block page-scripts
+	script(src="js/libs/swiper/dist/js/swiper.min.js")

@@ -29,14 +29,8 @@ html(lang='ru')
 			include ../_sections/_footer
 			.body-cover
 
-		script(src='js/libs/jquery/jquery-1.11.2.min.js')
-		script(src='js/libs/jsscrollpane/js/jquery.mousewheel.js')
-		script(src='js/libs/jsscrollpane/js/jquery.jscrollpane.min.js')
-		script(src='js/libs/slick/slick.min.js')
-		script(src='js/libs/slideout/slideout.js')
-		script(src='js/libs/waypoints/waypoints.min.js')
-		script(src='js/libs/animate/animate-css.js')
-		script(src="js/pradex-map.js")
-		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_NAmCu9dm16a9i0oeX0T6rBQFgObeiZA&callback=initMap" async defer)
-
+		include ../_misc/scripts
+		block page-scripts
+		
+		
 		script(src='js/common.js')

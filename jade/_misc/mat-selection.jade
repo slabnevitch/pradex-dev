@@ -1,0 +1,26 @@
+- var options = ['color', 'textile', 'frame'];
+each opt in options
+	.wrapper.mat-selection(data-option=opt, data-slideout-ignore)
+		.ico-close#mat-selectin__close
+		.mat-selection__window
+			form(action="#").mat-selection__body
+				- for (var z=0; z < 4; z++)
+					.mat-selection__column
+						.mat-selection-header ГЕПЮР ( + 1274 грн)
+						.mat-selection__container
+							- for (var n=0; n < 3; n++)
+								- for (var i=0; i < 4; i++)
+									label.mat-selection-item
+										img.mat-selection-item__img(src="img/product-card/material-selection/"+(i+1)+".jpg", alt="alt")
+										span.mat-selection-item__bottom
+											input(type="radio" name="select-material")
+											span.prdx-radio-custom
+											span.mat-selection-item__code 4003
+
+							//- label.mat-selection-item
+							//- 		span.mat-selection-item__img
+							//- 			img(src="img/product-card/material-selection/1.jpg", alt="alt")
+							//- 		span.mat-selection-item__bottom
+							//- 			input(type="radio" name="select-material")
+							//- 			span.prdx-radio-custom
+							//- 			span.mat-selection-item__code 4003

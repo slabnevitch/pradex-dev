@@ -1,0 +1,204 @@
+- var prods = ['ДИВАН ГЛОРИЯ ТРЕХМЕСТНІЙ', 'СТУЛ ВУД-2','ДИВАН ГЛОРИЯ ТРЕХМЕСТНІЙ', 'ДИВАН ГЛОРИЯ ТРЕХМЕСТНІЙ'];
+.wrapper.wrapper--fl.card-top
+	.card-top__left
+		ul.prd-breadcrumbs
+			li
+				a(href="#") Коллекции
+			li
+				a(href="#") Марокко
+			li
+				a(href="#") Пуф-подставка
+
+		.card-top__coll-name Коллекция Папасан
+		h1.card-top__prod-name КРЕСЛО ПАПАСАН
+
+		.card-view(data-slideout-ignore)
+			.card-view__display.swiper-container
+				.swiper-wrapper
+					- for (var i=0; i < 16; i++)
+						.swiper-slide.card-view__slide
+							div= i
+							img(src="img/product-card/big-view.jpg", alt="alt")
+
+		.card-view-nav(data-slideout-ignore)
+			.swiper-container.card-view__nav
+				.swiper-wrapper
+					- for (var n=0; n< 4; n++)
+						- for (var i=1; i < 5; i++)
+							.swiper-slide.card-view-nav__slide
+								img(src="img/product-card/card-view-nav-"+i+".jpg", alt="alt")
+				
+			.swiper-button-prev
+			.swiper-button-next
+
+		.card-additional(data-slideout-ignore)
+			.prod-card-sm-title Дополнительные товары:
+			.swiper-container.card-additional__slider
+				.swiper-wrapper
+					- for (var i=0; i < 2; i++)
+						each prod, index in prods
+							.swiper-slide
+								a(href="#").product-card
+									.product-card__top
+										.product-card__img
+												img(src="img/product-card/additional/"+ (index + 1) + ".jpg", alt="alt")
+									.product-card__name= prod
+									.product-card__bottom
+									
+										.product-card__price 1 836,00
+
+										//- .product-card__button
+										//- 	a(href="#").button.button-mini У КОШИК
+			.swiper-button-prev
+			.swiper-button-next
+
+				//- .swiper-scrollbar
+
+	.card-top__right
+		.card-top__header
+			.card-top__coll-name Коллекция Папасан
+			ul.card-top__socials
+				li
+					a(href="#")
+						.card-top__socicon.ico-viber
+						| Viber
+				li
+					a(href="#")
+						.card-top__socicon.ico-tg
+						| Telegram
+				li
+					a(href="#")
+						.card-top__socicon.ico-favourites
+						| В избранное
+
+		h1.card-top__prod-name КРЕСЛО ПАПАСАН
+
+		.prod-chars
+			.prod-card-sm-title.prod-card-sm-title--arrowed ХАРАКТЕРИСТИКИ
+
+			.prod-chars__table
+				- var props = [{prop: 'Ширина', val: '110 см'}, {prop: 'Глубина', val: '10 см'}, {prop: 'Высота', val: '12 см'}, {prop: 'Текстиль не входит в комплект', val: ''}, {prop: 'Высота сидения', val: '43 см'}, {prop: 'Высота подушки', val:'5 см'}, {prop: 'Материал каркаса', val: 'Алюминий'}];
+				
+				each item in props
+
+					if item.prop == 'Текстиль не входит в комплект'
+						.prod-chars__item
+							.prod-chars__prop= item.prop
+					else
+						.prod-chars__item
+							.prod-chars__prop= item.prop
+							.prod-chars__val= item.val
+
+			.prod-description
+				.materials-items
+					.materials-item(style="background-image: url(img/product-card/materials-lg/1.jpg)" data-destination="color")
+					.materials-item(style="background-image: url(img/product-card/materials-lg/2.jpg)" data-destination="textile")
+					.materials-item(style="background-image: url(img/product-card/materials-lg/3.jpg)" data-destination="frame")
+				
+				.prod-description__container.to-scrollpane
+					.prod-description__text Кресло Папасан – стильное и невероятно комфортное кресло  круглой формы. чашу, которая крепится к основе ремнями. Такая конструкция позволяет изменят вплоть до горизонтального, закрепив ремни в нужном положении. Кресло и декорировано искусственным ротангом, поэтому может использоваться воздухе, как мебель для загородного клуба, дачная мебель, мебель для беседки.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum magnam accusantium sapiente beatae laudantium sed laboriosam totam ipsa voluptas iste! Quam doloremque ipsam laborum aliquam, incidunt provident, molestias fugiat mollitia ipsum in error magni quos et delectus? Nobis, aliquid dolor rerum ratione ut doloribus placeat asperiores molestias alias? Recusandae rem, quam cum ad ea possimus dolorem suscipit ipsa error, eaque atque sunt assumenda neque hic.
+
+				.prod-description__container.prod-description__container--mob
+					.prod-description__text Кресло Папасан – стильное и невероятно комфортное кресло  круглой формы. чашу, которая крепится к основе ремнями. Такая конструкция позволяет изменят вплоть до горизонтального, закрепив ремни в нужном положении. Кресло и декорировано искусственным ротангом, поэтому может использоваться воздухе, как мебель для загородного клуба, дачная мебель, мебель для беседки.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum magnam accusantium sapiente beatae laudantium sed laboriosam totam ipsa voluptas iste! Quam doloremque ipsam laborum aliquam, incidunt provident, molestias fugiat mollitia ipsum in error magni quos et delectus? Nobis, aliquid dolor rerum ratione ut doloribus placeat asperiores molestias alias? Recusandae rem, quam cum ad ea possimus dolorem suscipit ipsa error, eaque atque sunt assumenda neque hic.
+					.quality-inner__cover
+
+
+			.material-select
+				.material-select__item#color
+					span Цвета ротанга
+					.material-select__icon(style="background-image: url(img/product-card/materials-xs/1.jpg)")
+					.material-select__trianle
+					.material-select__close.ico-close
+
+				.material-select__item#textile
+					span Текстиль
+					.material-select__icon(style="background-image: url(img/product-card/materials-xs/2.jpg)")
+					.material-select__trianle
+					.material-select__close.ico-close
+
+				.material-select__item#frame
+					span Цвет каркаса
+					.material-select__icon(style="background-image: url(img/product-card/materials-xs/3.jpg)")
+					.material-select__trianle
+					.material-select__close.ico-close
+
+			.prod-price
+				.prod-price__top
+					.prod-price__block.prod-price__block--price
+						.prod-price__label Цена:
+						.prod-price__price-val 3 915,00
+
+					.prod-price__block
+						.prod-price__label Кол-во:
+						.prod-price__count
+							.prod-price__button.prod-price__minus -
+							.prod-price__count-val 1
+							.prod-price__button.prod-price__plus +
+
+					a(href="#").button.button-lg КУПИТЬ
+
+				.prod-price__additional
+					.prod-price__option
+						span +  
+						| текстиль Велюр 023 (1105 грн)
+
+			a(href="#").button.button-lg.buy-button КУПИТЬ
+
+			.prod-parameters
+					.tabs
+						ul.tabs__list
+							li.tabs__item
+								a.tabs__link.prod-card-sm-title(href='#item1' title="ВИДЕО" data-scrollpane) ВИДЕО
+							li.tabs__item
+								a.tabs__link.prod-card-sm-title(href='#item2' title="Доставка" data-scrollpane) Доставка
+							li.tabs__item
+								a.tabs__link.prod-card-sm-title(href='#item3' title="Гарантия" data-scrollpane) Гарантия
+							li.tabs__item.tabs__item--active
+								a.tabs__link.prod-card-sm-title(href='#item4' title="Отзывы" data-scrollpane) Отзывы
+						
+						ul.tabs__content
+							li#item1.tabs__item.to-scrollpane.hidden
+								.prod-parameters__content
+									| 1
+
+							li#item2.tabs__item.to-scrollpane.hidden
+								.prod-parameters__content
+									| 2
+							li#item3.tabs__item.to-scrollpane.hidden
+								.prod-parameters__content
+									|  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae excepturi magni doloribus quae obcaecati dolores provident quis et dignissimos ipsum quo soluta veniam praesentium consequuntur, necessitatibus accusamus repellendus qui minus suscipit repellat illo sit error. Adipisci nulla suscipit officia quis est mollitia autem ullam quae, ratione accusantium itaque quos sint, libero et aliquam corporis architecto! Laboriosam sint inventore, magni aut totam porro quae fugiat quas dicta consectetur nam nisi voluptate repellendus, incidunt. Minus eos hic aperiam unde enim amet delectus voluptates voluptas natus aut, rem corporis autem ipsum pariatur, dolor doloremque. Aut laboriosam, facilis distinctio rerum quo, delectus modi, corporis minima, amet nesciunt sequi iure! Voluptate dignissimos et autem sed eveniet id adipisci repellendus pariatur, ut sapiente, officiis doloremque voluptatibus, fugit eius architecto aliquam voluptas, quisquam. Temporibus itaque veniam non, accusamus numquam officia quos veritatis consectetur magni eos tempora dolore cumque aperiam, impedit voluptates eveniet quod voluptatum blanditiis quo a reiciendis ab autem, distinctio repudiandae. Perferendis accusantium nisi quia voluptatem laboriosam voluptate reiciendis eligendi odit. Accusantium voluptatibus illum molestias, exercitationem reiciendis aspernatur rerum quod officiis nam laboriosam ea? Quam necessitatibus accusamus omnis, explicabo, in, maiores nobis enim laudantium officia provident quia earum commodi non facere. Nisi tempore repellat cum mollitia consequatur omnis nostrum facere similique laudantium, magni! Distinctio incidunt sunt velit cumque temporibus sequi in ex nemo impedit accusantium, fugit tempore itaque aliquid at dignissimos quod labore nisi laudantium quaerat qui, commodi, ipsa corrupti animi. Blanditiis tenetur nemo aspernatur, hic sint, quos expedita adipisci rerum magnam ea maiores. Amet est nemo beatae commodi eaque quas eligendi facere ullam. Architecto libero fugiat atque, at, cupiditate perferendis fuga nesciunt velit quo quis, ut ea repellat. Quo consectetur asperiores inventore maiores consequatur velit autem ex laborum, quas nisi tenetur minus necessitatibus. Nihil nemo amet culpa in qui facere voluptas, ab reprehenderit hic vel ex praesentium magnam temporibus illo dolores nisi perspiciatis blanditiis autem nulla laudantium aliquid quod cum. Cupiditate laborum corporis amet id rem atque ipsum ex numquam, deserunt qui odio corrupti dolores sed, doloremque animi cumque illum blanditiis rerum obcaecati dolorem vero dignissimos commodi vel veniam nobis? Expedita officiis, nesciunt voluptates provident ipsa cum veritatis, sit placeat iusto soluta recusandae voluptas quisquam cupiditate dolorum, delectus nostrum dignissimos iure. Aspernatur optio itaque eaque dolores eveniet ducimus perspiciatis facilis dicta vitae, suscipit in illum esse quos laudantium saepe incidunt voluptatem quisquam consequatur sint culpa illo. Sit id eius ullam illo nesciunt, suscipit, doloremque itaque, natus at commodi est officia. Molestias veritatis, molestiae quod ex. Dolores corporis aspernatur totam doloremque excepturi doloribus qui tenetur nesciunt, dolore distinctio nihil quaerat quia a, sapiente debitis iure at, ipsa facilis sint quos eveniet veniam sed maiores. Possimus, eos illum velit, quia veritatis voluptatum. Mollitia vel non nihil, deleniti expedita qui, asperiores quaerat! Magni ipsa molestias autem recusandae natus eius consequatur doloremque sequi, assumenda nam deserunt ex perspiciatis eum maxime necessitatibus, exercitationem totam libero officia corporis a eaque minima velit. Dolores temporibus officia quia! Cumque quasi, modi unde officiis dolore at recusandae, minima possimus ipsa error rerum, nisi accusantium.
+							li#item4.tabs__item.to-scrollpane
+								.prod-parameters__content
+									.prod-parameters__title ОПЛАТУ МОЖНО ОСУЩЕСТВИТЬ СЛЕДУЮЩИМ ОБРАЗОМ
+									- var prodParams = ['Наличными нашему курьеру.', ' Наложенным платежом в отделении «Новой почты» в момент получения товара.', 'По безналичному расчету, на расчетный счет продавца, согласно счета-фактуры.', 'Оплатить на карточку «ПриватБанка».'];
+
+									- for (var i=0; i < 10; i++)
+										ul.prdx-list
+											each param in prodParams
+												li= param
+			
+			.card-additional.card-additional--mob(data-slideout-ignore)
+				.prod-card-sm-title Дополнительные товары:
+				.swiper-container.card-additional__slider
+					.swiper-wrapper
+						- for (var i=0; i < 2; i++)
+							each prod, index in prods
+								.swiper-slide
+									a(href="#").product-card
+										.product-card__top
+											.product-card__img
+													img(src="img/product-card/additional/"+ (index + 1) + ".jpg", alt="alt")
+										.product-card__name= prod
+										.product-card__bottom
+										
+											.product-card__price 1 836,00
+
+											//- .product-card__button
+											//- 	a(href="#").button.button-mini У КОШИК
+					.swiper-button-prev
+					.swiper-button-next
+
+					.swiper-scrollbar
+
+include ../_misc/mat-selection
+
