@@ -13,6 +13,7 @@ $(function() {
 			},
 			onStick: function () {
 				$('.header').not(".banner--clone").addClass('hidden');
+				ddh.hideAllDropdowns();
 			},
 			onUnstick: function () {
 				$('.header').not(".banner--clone").removeClass('hidden');
@@ -242,7 +243,9 @@ $(function() {
 			'tolerance': 70
 		});
 
-		document.querySelectorAll('.toggle-mnu:not(.toggle-mnu--for-fixed)').forEach(function(elem) {
+		var headerToggler = document.querySelectorAll('.toggle-mnu:not(.toggle-mnu--for-fixed)');
+
+		[].forEach.call(headerToggler, function(elem) {
 			elem.addEventListener('click', function(e) {
 				e.preventDefault();
 				// this.classList.toggle('on');
@@ -607,6 +610,12 @@ $(function() {
 					// computed =  window.getComputedStyle(document.querySelector('.card-top'), null).getPropertyValue('padding-top'),
 					// computedNumbers = +computed.replace(/\D/g, ""),
 					luft = this.offsetTop + headerHeight + 20;
+
+				if($('.banner--clone').hasClass('banner--stick')){
+					luft = this.offsetTop - 20;
+					if(screen.width <=576) luft = luft + 20;
+				}
+				console.log(headerHeight);
 
 				if(screen.width <=576) luft = luft - 10;
 				

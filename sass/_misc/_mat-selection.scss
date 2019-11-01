@@ -21,7 +21,7 @@
 	}
 }
 .mat-selection__window{
-	padding: rem(68px) rem(60px) 30px rem(60px);
+	padding: 68px rem(60px) 30px rem(60px);
 	@include mq($max-width: 576px){
 		padding-top: 50px;
 	}
